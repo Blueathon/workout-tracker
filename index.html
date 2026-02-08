@@ -1183,7 +1183,9 @@
         let progressChart = null;
         let volumeChart = null;
 
-        // Register service worker for PWA
+        // Service worker disabled for now to prevent 404 issues
+        // Uncomment below to enable offline functionality:
+        /*
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./service-worker.js')
@@ -1191,6 +1193,7 @@
                     .catch(err => console.log('SW registration failed:', err));
             });
         }
+        */
 
         // Initialize image storage
         function initializeImageStorage() {
